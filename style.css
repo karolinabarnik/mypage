@@ -147,6 +147,32 @@ section {
   background: #e2d8cf;
 }
 
+.tech {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.html {
+  position: relative;
+  display: inline-block;
+}
+
+.html {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  background-color: black;
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.html:hover {
+  visibility: visible;
+}
+
 /*Skills*/
 [class^="skill-"] {
   position: relative;
@@ -356,3 +382,59 @@ input[type="submit"] {
 /*::before lub ::after. width i height na 100%, 
 background na dowolny kolor, 
 opacity: 0.5 */
+/*MEDIA*/
+@media all and (max-width: 991px) {
+  .about, .intro, .contact, .portfolio {
+    max-width: 100%;
+  }
+  .project-desc {
+    text-align: left;
+  }
+  .page-subtitle {
+    font-size: 18px;
+  }
+  .splash {
+    height: 100vh;
+    max-width: 991px;
+    position: relative;
+  }
+  .page-title {
+    font-size: 15px;
+  }
+  .splash-inner {
+    max-width: 100vw;
+  }
+  .splash i {
+    font-size: 20px;
+    /*background: $color-light;*/
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+  }
+  .myproject {
+    flex-direction: column;
+  }
+  .row {
+    flex-wrap: wrap;
+    width: 300px;
+    padding: 10px;
+  }
+  .section-title {
+    position: relative;
+  }
+}
+
+@media all and (max-width: 568px) {
+  .page-title {
+    font-size: 13px;
+    max-width: 568px;
+  }
+  .splash {
+    width: 110vw;
+    height: 110vh;
+  }
+  .about {
+    background-size: cover;
+  }
+}

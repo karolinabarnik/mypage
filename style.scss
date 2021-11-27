@@ -151,36 +151,95 @@ section {
 
 .about {
     background: $color-second;
+    font-family: $font-text;
 }
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+}
 .tech {
     font-size: 50px;
     margin: 10px;
+
 }
 
-.html {
-    position: relative;
-    display: inline-block;
+.html::after {
+    content: "HTML";
+    display: none;
+}  
+
+.html:hover:after {
+    display: block;
 }
 
-.html {
-    visibility: hidden;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    background-color: black;
-    color: white;
-    padding: 5px 0;
-    text-align: center;
+.css::after {
+    content: "CSS";
+    display: none;
+}  
+
+.css:hover:after {
+    display: block;
 }
 
+.js::after {
+    content: "JavaScript";
+    display: none;
+}  
 
-.html:hover {
-visibility: visible;
+.js:hover:after {
+    display: block;
+}
+
+.sass::after {
+    content: "SASS";
+    display: none;
+}  
+
+.sass:hover:after {
+    display: block;
+}
+
+.react::after {
+    content: "REACT";
+    display: none;
+}  
+
+.react:hover:after {
+    display: block;
+}
+
+.bootstrap::after {
+    content: "Bootstrap";
+    display: none;
+}  
+
+.bootstrap:hover:after {
+    display: block;
+}
+
+.node::after {
+    content: "nodeJS";
+    display: none;
+}  
+
+.node:hover:after {
+    display: block;
+}
+
+.wordpress::after {
+    content: "Wordpress";
+    display: none;
+
+}  
+
+.wordpress:hover:after {
+    display: block;
 }
 
 /*Skills*/
+
 [class^="skill-"] {
     position: relative;
 }
@@ -381,6 +440,7 @@ input[type="submit"] {
   }
 
 /*FOOTER*/
+
 .page-footer {
     background: $color-footer;
     color: $color-text-titles;
@@ -447,10 +507,11 @@ opacity: 0.5 */
 
 }
 
-@media all and (max-width: 568px) {
-    .page-title {
+@media all and (max-width: 1380px) {
+    
+   .page-title {
         font-size: 13px;
-        max-width: 568px;
+        max-width: 1380px;
     }
 
     .splash {
@@ -461,5 +522,10 @@ opacity: 0.5 */
     .about {
         background-size: cover;
     }
-    
+
+    .icons {
+        flex-direction: column;
+    }
+
 }
+
